@@ -66,45 +66,6 @@ public class QuestRegistry implements Registry {
         );
         if (this.plugin.getConfig("settings").bool("enable-play-time")) {
             new PlayTimeQuest(this.plugin);
-        }
-        this.hook("AdvancedEnchantments", AdvancedEnchantmentsQuests::new);
-        this.hook("ASkyblock", ASkyblockQuests::new);
-        this.hook("AuctionHouse", AuctionHouseKludgeQuests::new, "klugemonkey");
-        this.hook("AutoSell", AutoSellQuests::new, "extended_clip");
-        this.hook("BedWars1058", BedWars1058Quests::new);
-        this.hook("KOTH", BenzimmerKothQuests::new, "benzimmer123");
-        this.hook("BuildBattle", BuildBattleTigerQuests::new, "Tigerpanzer");
-        this.hook("ChatReaction", ChatReactionQuests::new);
-        this.hook("ChestShop", ChestShopQuests::new, version -> version > 3.92);
-        this.hook("ChestShop", ChestShopQuests::new, "https://github.com/ChestShop-authors/ChestShop-3/contributors", version -> version > 3.92);
-        this.hook("ChestShop", LegacyChestShopQuests::new, "https://github.com/ChestShop-authors/ChestShop-3/contributors", version -> version <= 3.92);
-        this.hook("Citizens", CitizensQuests::new);
-        this.hook("Clans", ClansQuests::new);
-        this.hook("ClueScrolls", ClueScrollsQuests::new);
-        this.hook("CrateReloaded", CrateReloadedQuests::new);
-        this.hook("CratesPlus", CratesPlusQuests::new);
-        this.hook("CrazyCrates", CrazyCratesQuests::new);
-        this.hook("DiscordMinecraft", DiscordMinecraftQuests::new);
-        this.hook("Jobs", JobsQuests::new);
-        this.hook("Lands", LandsQuests::new);
-        this.hook("LobbyPresents", LobbyPresentsPoompkQuests::new, "poompk");
-        this.hook("KoTH", SubsideKothQuests::new, "SubSide");
-        this.hook("MoneyHunters", MoneyHuntersQuests::new);
-        this.hook("MythicMobs", MythicMobsQuests::new);
-        this.hook("PlotSquared", PlotSquaredQuests::new);
-        this.hook("ProCosmetics", ProCosmeticsQuests::new);
-        this.hook("CrazyEnvoy", CrazyEnvoyQuests::new);
-        this.hook("Shopkeepers", ShopkeepersQuests::new, "nisovin");
-        this.hook("SkillAPI", SkillApiQuests::new);
-        this.hook("StrikePractice", StrikePracticeQuests::new);
-        this.hook("SuperiorSkyblock2", SuperiorSkyblockQuests::new);
-        this.hook("TheLab", TheLabQuests::new);
-        this.hook("TokenEnchant", TokenEnchantQuests::new);
-        this.hook("UltraSkyWars", UltraSkyWarsQuests::new, "Leonardo0013YT");
-        this.hook("uSkyBlock", USkyBlockQuests::new);
-        this.hook("Votifier", VotifierQuests::new);
-        this.placeholderAPI(this.plugin.getQuestCache().getPlaceholderTypes());
-    }
 
     public Set<String> getRegisteredHooks() {
         return this.registeredHooks;
